@@ -1,0 +1,110 @@
+<script>
+    var edad=prompt("introduce tu edad");
+    var nombre=prompt("introduce tu nombre");
+    var genero=prompt("introduce tu genero")
+    var conquientevascasarhombres= ["Jorman","Enrique","Jose","Wiliam","Emmanuel","Juan","Aldrich","Adolfo","Carlos","Ricardo"];
+    var conquientevascasarmujeres= ["Monica","Lorena","Malinalie","Karla","Amairanhi","Valentina","Alondra","Deniss","Karen","Magali"];
+    var endondetevas=["carro","avion","metro","barco","a pata","en burro","en bici","en limocina","en taxi","en uber"];
+    var endondetecasas=["new york","en la calle","en la iglesia","en tu casa","en la ciudad","españa","argentina","canada","en un campo de futbol","en la casa de tu suegra"];
+    var dequecolor=["azul","negro","blanco","rojo","morado","gris","beige","rosa","dorado","plateado"];
+    var cuantoshijos=[1,2,3,4,5,6,7,8,9,10];
+   
+    function obtenerenombrecasado(edad){
+        let resultado;
+        if(genero=="F"){
+            for(let a=0;a<conquientevascasarhombres.length;a++){
+                
+                if(edad>0){
+                    resultado=conquientevascasarhombres[a];
+                    edad-=1;
+                    if(a==conquientevascasarhombres.length-1 && edad>0){
+                        a=0;
+                    }
+                }
+            }
+        }else{
+            for(let a=0;a<conquientevascasarmujeres.length;a++){
+                
+                if(edad>0){
+                    resultado=conquientevascasarmujeres[a];
+                    edad-=1;
+                    if(a==conquientevascasarmujeres.length-1 && edad>0){
+                        a=0;
+                    }
+                }
+            }
+        }
+        return resultado; 
+    }
+    
+    function adondetevas(edad){
+        let resultado;
+        for(let a=0;a<endondetevas.length;a++){
+            
+            if(edad>0){
+                 resultado=endondetevas[a];
+                 edad-=1;
+                if(a==endondetevas.length-1 && edad>0){
+                    a=0;
+                }
+            }
+        }
+    
+        return resultado; 
+    }
+    function lugar(edad){
+        let resultado;
+        for(let a=0;a<endondetecasas.length;a++){
+            
+            if(edad>0){
+                 resultado=endondetecasas[a];
+                 edad-=1;
+                if(a==endondetecasas.length-1 && edad>0){
+                    a=0;
+                }
+            }
+        }
+    
+        return resultado; 
+    }
+    function color(edad){
+        let resultado;
+        for(let a=0;a<dequecolor.length;a++){
+            
+            if(edad>0){
+                 resultado=dequecolor[a];
+                 edad-=1;
+                if(a==dequecolor.length-1 && edad>0){
+                    a=0;
+                }
+            }
+        }
+    
+        return resultado; 
+    }
+    function chamacos(edad){
+        let resultado;
+        for(let a=0;a<cuantoshijos.length;a++){
+            
+            if(edad>0){
+                 resultado=cuantoshijos[a];
+                 edad-=1;
+                if(a==cuantoshijos.length-1 && edad>0){
+                    a=0;
+                }
+            }
+        }
+    
+        return resultado; 
+    }
+
+
+
+
+console.log("con quien te casas:"+obtenerenombrecasado(edad));
+console.log("en que te vas:"+adondetevas(edad));
+console.log("en donde te casas:"+lugar(edad));
+console.log("de que color:"+color(edad));
+console.log("hijos: "+chamacos(edad));
+
+</script>
