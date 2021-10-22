@@ -1,0 +1,12 @@
+<script>
+    var numero = parseInt(prompt("INGRESA UN NUMERO"));
+    var letras = ("ABCDEFGHIJKLMNÑOPQRSTUVXYZ");
+    for (var i = 1; i <= numero; i++) {
+        var letra = "";
+        for (var j = i; j <= i; j++) {
+            letra += letras[Math.floor(Math.random() * letras.length)];
+        }
+
+        console.log(letra);
+    }
+</script>
