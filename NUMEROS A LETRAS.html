@@ -1,0 +1,99 @@
+<script>
+    var numero = prompt("ingresa numero o palabra a convertir ");
+
+    let numero2 = convertirLetraANumero(numero);
+    let letras = convertirNumeroALetra(numero);
+
+    console.log(numero2);
+
+
+
+    function convertirNumeroALetra(numero) {
+        var cadena = " ";
+        for (var i = 0; i < numero.length; i++) {
+            switch (numero[i]) {
+                case "0":
+                    cadena += "cero"
+                    break;
+                case "1":
+                    cadena += "UNO"
+                    break;
+                case "2":
+                    cadena += "DOS"
+                    break;
+                case "3":
+                    cadena += "TRES"
+                    break;
+                case "4":
+                    cadena += "CUATRO"
+                    break;
+                case "5":
+                    cadena += "CINCO"
+                    break;
+                case "6":
+                    cadena += "SEIS"
+                    break;
+                case "7":
+                    cadena += "SIETE"
+                    break;
+                case "8":
+                    cadena += "OCHO"
+                    break;
+                case "9":
+                    cadena += "NUEVE"
+                    break;
+
+
+                default:
+                    break;
+            }
+        }
+        return cadena;
+
+
+
+
+    }
+    function convertirLetraANumero(numero) {
+        var cadena = " ";
+        switch (numero) {
+
+            case "cero":
+                cadena += "0"
+                break;
+            case "uno":
+                cadena += "1"
+                break;
+            case "dos":
+                cadena += "2"
+                break;
+            case "tres":
+                cadena += "3"
+                break;
+            case "cuatro":
+                cadena += "4"
+                break;
+            case "cinco":
+                cadena += "5"
+                break;
+            case "seis":
+                cadena += "6"
+                break;
+            case "siete":
+                cadena += "7"
+                break;
+            case "ocho":
+                cadena += "8"
+                break;
+            case "nueve":
+                cadena += "9"
+                break;
+
+
+            default:
+                break;
+        }
+        return cadena;
+    }
+    
+</script>
