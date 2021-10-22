@@ -1,0 +1,19 @@
+<script>
+    var numero = parseInt(prompt("Cuantas personas participan en la rifa?"))
+    var nombres = [];
+    for (i = 1; i <= numero; i++) {
+        var j = prompt("Nombre del participante")
+        nombres.push(j);
+    }
+
+
+
+    function Ganador(j) {
+        let nombres = j;
+        a = Math.floor(Math.random() * (j.length));
+        b = j[a];
+        alert("el Ganador de la rifa es: " + b);
+        alert(nombres);
+    }
+    Ganador(nombres);
+</script>
